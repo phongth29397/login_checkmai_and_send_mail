@@ -1,0 +1,24 @@
+setting file .evn
+
+thêm vào controller 
+ public function submit_pass($id, Request $request) 
+    {
+        $to_name='aa';//ko biết có tác dụng gì
+        $to_email="taolamy01@gmail.com";//gmail cua nguoi nhan
+
+        $data=array('name'=>'peter','body'=>'test');//noi dung gui đến file mail.blade.php
+        Mail::send('mail',$data,function ($message) use ($to_name, $to_email){ //chọn đến file mail.blade.php phải tạo file mail.blade.php
+            $message->to($to_email)
+                ->subject('Lara mail subjject');//Nội dung của email
+    
+     return view('change_pass',compact('user_info'));
+    }
+
+thêm vào đầu controller
+
+use Mail;
+
+tạo file mail.blade.php 
+
+hi<strong>{{$name}}<strong> /*name là nội dung trong $dât của controller*\
+<p>ssssss</p>

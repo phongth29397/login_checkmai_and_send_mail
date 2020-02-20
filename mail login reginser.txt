@@ -1,0 +1,127 @@
+composer create-project --prefer-dist laravel/laravel blog "5.8.*"
+php artisan key:generate
+php artisan make:auth
+vao C:\xampp\htdocs\myproject\app\Providers\AppServiceProvider.php 
+theem vafo 
+<?php
+
+namespace App\Providers;
+
+use Illuminate\Support\ServiceProvider;
+
+use Schema;
+
+class AppServiceProvider extends ServiceProvider
+{
+    /**
+     * Register any application services.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        //
+    }
+
+    /**
+     * Bootstrap any application services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        Schema::defaultStringLength(191);
+    }
+}
+
+
+heeteeeeeeeeeeeeeeeeeeeeeeeeeeee
+
+
+
+C:\xampp\htdocs\myproject\app\User.php sua thanh
+<?php
+
+namespace App;
+
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+
+class User extends Authenticatable implements MustVerifyEmail
+{
+    use Notifiable;
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'name', 'email', 'password',
+    ];
+
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'password', 'remember_token',
+    ];
+
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+    ];
+}
+   
+
+
+
+sua trong router wed Auth::routes(['verify' =>true]);
+sua C:\xampp\htdocs\blog\app\Http\Controllers\HomeController.php
+ <?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class HomeController extends Controller
+{
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware(['auth'=>'verified']);
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function index()
+    {
+        return view('home');
+    }
+}
+ suar file evn
+
+MAIL_DRIVER=smtp
+MAIL_HOST=smtp.googlemail.com
+MAIL_PORT=465
+MAIL_USERNAME=bmvusat@gmail.com
+MAIL_PASSWORD=phong123
+MAIL_ENCRYPTION=ssl
+
+php artisan migrate
+
+php artisan migrate:refresh

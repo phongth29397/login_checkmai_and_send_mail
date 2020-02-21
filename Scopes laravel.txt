@@ -1,0 +1,11 @@
+ví dụ model user
+vào model user thêm
+
+
+public function scopeGetUsers($query){       /*GetUsers*\
+        return $query->where('phone', '=', '0998123456')->get();
+    }
+
+
+
+$user_info=User::GetUsers();  câu lệnh này trong controller sẽ lấy ra hàng có phone ='0998123456' ngắn gọn đơn giản không phải viết nhiều lần

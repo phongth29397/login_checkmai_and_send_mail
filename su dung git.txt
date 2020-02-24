@@ -25,6 +25,7 @@ git slog để sử dụng chạy câu lệnh dưới trước
 git config --global alias.slog "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 gitk xem bang  chi tiet
 $ git merge fearture      gộp nhánh fearture vào nhánh cha của nó
+$ git rm -r --cached .    gitinoe loại bỏ các file khỏi git cache thì gitinore mới có tác dụng
 https://www.youtube.com/watch?v=KnuaVfi5MFU lỗi thông tin đăng nhập xem để fix
 $ git config user.email ="nguyenphong3297@gmail.com"
 $ git config user.name ="phongth29397"

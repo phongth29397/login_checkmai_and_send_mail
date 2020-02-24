@@ -18,7 +18,7 @@ $ git clone https://github.com/phongth29397/thlaravel.git  tải về toàn bộ
 
 $ git pull             lay cac thay doi tu reponstory về máy
 git push --set-upstream origin develop đẩy các thay đổi từ branch lên igt\\git
-$ git checkout develop    chuyển nhánh
+$ git checkout develop    chuyển nhánh nếu đã tạo nhánh này trước thì cần pull dữ liệu từ nhành này về mới tiến hành push đc
 $ git branch kiểm tra các nhánh 
 git log
 git slog để sử dụng chạy câu lệnh dưới trước

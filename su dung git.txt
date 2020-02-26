@@ -33,3 +33,4 @@ d xoas
 :w luu
 :q
 save
+git push -u origin develop
